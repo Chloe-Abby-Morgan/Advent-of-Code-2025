@@ -2,7 +2,7 @@ ids = []
 invalidIds = []
 result = 0
 
-with open(r"C:\Users\chloe\Desktop\Dev\Advent of Code\Day 2\input.txt") as f:
+with open(r"C:\Users\chloe\Desktop\Dev\Advent-of-Code-2025\Advent of Code\Day 2\input.txt") as f:
     pInput = f.read().strip()
 pInput = pInput.split(",")
 

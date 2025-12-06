@@ -2,7 +2,7 @@ x = 0
 y = 0
 total = 0
 
-with open(r"C:\Users\chloe\Desktop\Dev\Advent of Code\Day 4\input.txt") as f:
+with open(r"C:\Users\chloe\Desktop\Dev\Advent-of-Code-2025\Advent of Code\Day 4\input.txt") as f:
     pInput = [line.strip() for line in f]
 
 for i in range(len(pInput)):

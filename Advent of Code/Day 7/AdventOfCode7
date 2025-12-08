@@ -1,0 +1,39 @@
+#It is currently 7:11 and I am too tired to debug
+#Errors: It does not account for the final beams; it assumes that all spliters are activated
+
+
+splitters = []
+x = 0
+y = 0
+total = 1 #Inital beam
+
+with open(r"C:\Users\chloe\Desktop\Dev\Advent-of-Code-2025\Advent of Code\Day 7\input.txt") as f:
+    pInput = [list(line.strip()) for line in f.readlines()]
+
+#Get spliter positions
+for elt in pInput:
+    x = 0
+
+    for char in elt:
+        if char == "^":
+            splitters.append((x,y))
+        x += 1
+    y += 1
+
+#Checks for beams going upwards from the splitters
+for splitter in splitters:
+
+    #Checks everything upwards from the splitter
+    for i in range(splitter[1], 0, -1):
+
+        #If there is a splitter which could activate the current one, there must be a beam
+        try:
+            if pInput[i+1][splitter[0]-2] == "^" or pInput[i+1][splitter[0]+2] == "^":
+                total += 1
+                break
+        except:
+            continue
+
+print("The total number of beams is: ", total)
+
+
